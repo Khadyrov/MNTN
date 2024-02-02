@@ -1,0 +1,59 @@
+@use '../../defaultScssStyle/base.scss';
+
+.bg {
+  width: 100%;
+  height: 150vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    background: linear-gradient(to top, rgba(11, 29, 38, 0), rgba(11, 29, 38, 1));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 150px; 
+    background: linear-gradient(to bottom, transparent, base.$primary-background);
+    bottom: 0;
+    left: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+  }
+
+  &__image--cloud {
+    position: absolute;
+    top: 0px;
+    object-position: top;
+  }
+
+  &__image--mountain {
+    position: absolute;
+    top: 34%;
+    object-position: top;
+  }
+  &__image--human {
+    position: absolute;
+    top: 56.67%;
+    object-position: top;
+    
+  }
+
+  
+}

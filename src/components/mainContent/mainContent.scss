@@ -1,0 +1,71 @@
+@use '../../defaultScssStyle/base.scss';
+
+.mainContent {
+  margin: 0;
+  max-width: 930px;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  
+  &__subtitle {
+    font-weight: 800;
+    color: base.$secondary-color;
+    font-size: 18px;
+    letter-spacing: 6px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 72px;
+      height: 2px;
+      background: base.$secondary-color;
+      margin-right: 32px;
+    }
+  }
+
+  &__title {
+    font-family: base.$secondary-font;
+    font-weight: 600;
+    font-size: 88px;
+    margin: 31px 0 33px 0;
+  }
+
+  &__footer {
+    font-size: 18px;
+    font-weight:700;
+    font-family: base.$secondary-font;
+    display: flex;
+
+
+    .animated-item {
+      display: inline-block;
+      margin-left: 15px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        color: base.$primary-color;
+        position: relative;
+        animation: arrow 2s infinite;
+        animation-fill-mode: forwards;
+      }
+    }
+
+
+  }
+}
+
+
+@keyframes arrow {
+  0% {top: -50px}
+  25% {top: 0px}
+  50% {top: 0px}
+  80% {top: 0px}
+  100% {top: 50px}
+
+}

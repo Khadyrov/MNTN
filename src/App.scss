@@ -1,0 +1,20 @@
+@use './defaultScssStyle/base.scss';
+ 
+.app {
+  color: base.$primary-color;
+  max-width: 1760px;
+  width: 91.67vw;
+  height: 100vh;
+}
+
+a {
+  font-family: base.$primary-font;
+  color: base.$primary-color;
+  text-decoration: none;
+  font-size: base.$primary-font;
+  transition: 0.3s;
+
+  &:hover {
+    color: base.$secondary-color;
+  }
+}

@@ -1,0 +1,71 @@
+@use '../../defaultScssStyle/base.scss';
+
+.fixedItems {
+  max-width: 1760px;
+  width: 91.67vw;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+
+
+  
+
+  .followUs {
+    position: absolute;
+    top: 50%;
+    font-family: base.$primary-font;
+    font-weight: 700;
+    font-size: 18px;
+    width: fit-content;
+    transform: translateX(-35%) rotate(90deg) ; 
+    display: flex;
+    height: 0;
+
+    &__icon {
+      margin-left: 24px;
+      height: 0;
+
+      &__img {
+        transform: rotate(-90deg);
+        color:red;
+      }
+    }
+
+    &--transform {
+      display: flex;
+      margin-left: -40%;
+    }
+
+  }
+
+
+  .slider {
+    width: 77px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-70%);
+    font-family: base.$primary-font;
+  
+    &__items {
+      font-size: 18px;
+      padding: 16px 32px 16px 0px;
+      text-align: right;
+      display: block;
+    }
+
+
+
+  }
+
+}
+
+.borderLine {
+  border-right: 3px solid base.$primary-color ;
+
+  &:hover {
+    border-color: base.$secondary-color
+  }
+}
+

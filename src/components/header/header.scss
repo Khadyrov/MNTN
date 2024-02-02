@@ -1,0 +1,61 @@
+@use '../../defaultScssStyle/base.scss';
+
+
+.header {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 32px;
+    font-family: base.$secondary-font;
+    line-height: 38.4px;
+  }
+
+  &__nav-bar {
+    display: flex;
+    justify-content: center;
+    font-family: base.$primary-font;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.76px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__a {
+      margin: 0px 20px;
+      transition: 0.3s;
+    }
+
+  }
+
+  &__account {
+    font-size: 17px;
+    
+    a {
+      display: flex;
+      align-items: center;
+      transition: 0s;
+
+      
+
+      &:hover {
+        .header__account--icon {
+          background-color: base.$secondary-color; 
+  
+        }
+      }
+    }
+
+    &--icon {
+      width: 24px;
+      height: 24px;
+      background-color: base.$primary-color;
+      mask-image: url('../../icons/cart.svg');
+    }
+
+
+  }
+}
